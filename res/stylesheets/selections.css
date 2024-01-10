@@ -1,0 +1,7 @@
+@import url("/res/stylesheets/variables.css");
+
+::selection {
+    background: #000000;
+    color: #FFFFFF;
+}
+

@@ -1,0 +1,19 @@
+@import url("/res/stylesheets/variables.css");
+
+::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--black-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--primary-color), var(--secondary-color));
+}
+
+body {
+    height: 500rem;
+}
+

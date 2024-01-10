@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap');
+
+:root {
+    --primary-color: #00ff99;
+    --secondary-color: #00bbff;
+
+    --white-color: #eeeeee;
+    --black-color: #111111;
+
+    --navbar-background-color: #000000;
+    --navbar-shadow-color: #000000;
+    --navbar-text-color: #FFFFFF;
+
+    --navbar-hamburger-button-background-color: #FFFFFF33;
+    --navbar-hamburger-button-shadow-color: #FFFFFF;
+    --navbar-hamburger-button-hover-background-color: #FFFFFF66;
+    --navbar-hamburger-button-hover-shadow-color: #FFFFFF;
+    --navbar-hamburger-button-text-color: #FFFFFF;
+
+    --navbar-tooltip-background-color: #FFFFFF;
+    --navbar-tooltip-text-color: #000000;
+    
+    --success-color: #28a745;
+    --info-color: #17a2b8;
+    --warning-color: #ffc107;
+    --danger-color: #dc3545;
+    
+    --light-color: #f8f9fa;
+    --light-gray-color: #e9ecef;
+    --mid-gray-color: #dee2e6;
+    --gray-color: #6c757d;
+    --dark-color: #1d2124;
+
+    --border-radius: 0.5rem;
+    --border-thickness: 0.2rem;
+
+    --font-family-sans-serif: 'Open Sans', sans-serif;
+    --font-family-monospace: 'JetBrains Mono', monospace;
+    --font-family-cursive: 'Pacifico', cursive;
+
+    --transition: all 0.2s ease-in-out;
+
+    --tooltip-background-color: #000000;
+    --tooltip-text-color: #FFFFFF;
+}
+

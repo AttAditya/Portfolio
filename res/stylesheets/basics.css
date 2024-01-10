@@ -1,0 +1,19 @@
+@import url("/res/stylesheets/variables.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family-sans-serif);
+    transition: var(--transition);
+}
+
+body {
+    background-color: var(--light-color);
+    color: var(--dark-color);
+}
+
+.container {
+    padding: 2rem 4rem;
+}
+
