@@ -1,3 +1,4 @@
+from __future__ import annotations
 from deta import Deta, _Base, _Drive
 
 class Database:

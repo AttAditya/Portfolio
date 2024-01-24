@@ -9,6 +9,8 @@
     --white-color: #eeeeee;
     --black-color: #111111;
 
+    --navbar-expand-color: var(--black-color);
+
     --navbar-background-color: #000000;
     --navbar-shadow-color: #000000;
     --navbar-text-color: #FFFFFF;

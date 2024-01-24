@@ -1,25 +1,126 @@
 @import url("/res/stylesheets/variables.css");
 
+@keyframes color-slide {
+    0% {
+        background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 0%, var(--navbar-hamburger-button-background-color) 0%, var(--navbar-hamburger-button-background-color) 100%);
+    }
+
+    5% {
+        background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 0%, var(--navbar-hamburger-button-background-color) 10%, var(--navbar-hamburger-button-background-color) 100%);
+    }
+
+    10% {
+        background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 0%, var(--navbar-hamburger-button-background-color) 20%, var(--navbar-hamburger-button-background-color) 100%);
+    }
+
+    15% {
+        background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 0%, var(--navbar-hamburger-button-background-color) 30%, var(--navbar-hamburger-button-background-color) 100%);
+    }
+
+    20% {
+        background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 10%, var(--navbar-hamburger-button-background-color) 40%, var(--navbar-hamburger-button-background-color) 100%);
+    }
+
+    25% {
+        background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 20%, var(--navbar-hamburger-button-background-color) 50%, var(--navbar-hamburger-button-background-color) 100%);
+    }
+
+    30% {
+        background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 30%, var(--navbar-hamburger-button-background-color) 60%, var(--navbar-hamburger-button-background-color) 100%);
+    }
+
+    35% {
+        background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 40%, var(--navbar-hamburger-button-background-color) 70%, var(--navbar-hamburger-button-background-color) 100%);
+    }
+
+    40% {
+        background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 50%, var(--navbar-hamburger-button-background-color) 80%, var(--navbar-hamburger-button-background-color) 100%);
+    }
+
+    45% {
+        background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 60%, var(--navbar-hamburger-button-background-color) 90%, var(--navbar-hamburger-button-background-color) 100%);
+    }
+
+    50% {
+        background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 70%, var(--navbar-hamburger-button-background-color) 100%, var(--navbar-hamburger-button-background-color) 100%);
+    }
+
+    55% {
+        background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 80%, var(--navbar-hamburger-button-background-color) 100%, var(--navbar-hamburger-button-background-color) 100%);
+    }
+
+    60% {
+        background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 90%, var(--navbar-hamburger-button-background-color) 100%, var(--navbar-hamburger-button-background-color) 100%);
+    }
+
+    65% {
+        background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%, var(--navbar-hamburger-button-background-color) 100%, var(--navbar-hamburger-button-background-color) 100%);
+    }
+
+    100% {
+        background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%, var(--navbar-hamburger-button-background-color) 100%, var(--navbar-hamburger-button-background-color) 100%);
+    }
+}
+
 .hero {
     width: 100%;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: relative;
-    z-index: 1;
+}
+
+.hero-navbar-space {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 3.5rem;
+    background-color: var(--navbar-background-color);
+    display: flex;
+}
+
+.hero::before {
+    width: 100%;
+    height: 3.75rem;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    top: 0;
+    left: 0;
+    position: absolute;
+    content: " ";
+}
+
+.hero-navbar-list {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+}
+
+.hero-navbar-list-item > a {
+    display: flex;
+    padding: 0.5rem;
+    text-decoration: none;
+    gap: 0.5rem;
+    border-radius: 0.5rem;
+    color: var(--navbar-text-color);
+    background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 0%, var(--navbar-hamburger-button-background-color) 0%, var(--navbar-hamburger-button-background-color) 100%);
+}
+
+.hero-navbar-list-item > a:hover {
+    animation: color-slide 0.3s forwards;
 }
 
 .hero-content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
     color: #FFFFFF;
-    z-index: 2;
     width: 100%;
     height: 100%;
+    position: relative;
 }
 
 .hero-content-image {
@@ -45,6 +146,7 @@
     width: 100%;
     position: sticky;
     top: 0;
+    z-index: 2;
 }
 
 .hero-content-text-title {
@@ -61,5 +163,27 @@
     font-weight: 300;
     background-color: var(--black-color);
     padding: 0.5rem;
+}
+
+.hero-content-buttons {
+    margin-bottom: 1rem;
+}
+
+.hero-content-button {
+    padding: 0.5rem;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    opacity: 0.2;
+    background: transparent;
+    color: var(--light-color);
+}
+
+.hero-content-button:hover {
+    opacity: 1;
+    scale: 1.5;
 }
 

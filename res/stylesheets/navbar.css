@@ -1,16 +1,17 @@
 @import url("/res/stylesheets/variables.css");
 
 .navbar {
-    background-color: var(--navbar-background-color);
+    /* background-color: var(--navbar-background-color); */
+    background-color: var(--navbar-expand-color);
     position: fixed;
     right: 1rem;
     top: 1rem;
     z-index: 100;
     border-radius: 2rem;
-    width: 3.4rem;
+    /* width: 3.4rem; */
     box-shadow: 0 0 0.5rem var(--navbar-shadow-color);
     height: fit-content;
-    border: 0.2rem solid var(--secondary-color);
+    /* border: 0.2rem solid var(--secondary-color); */
 }
 
 .navbar-hamburger {
@@ -18,7 +19,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding: 0rem;
+    padding: 0.5rem;
     height: fit-content;
 }
 
@@ -33,12 +34,12 @@
     cursor: pointer;
     border: none;
     padding: 0.25rem;
-    border: 0.2rem solid var(--primary-color);
     scale: 1.5;
+    border: 0.2rem solid var(--primary-color);
 }
 
 .navbar-hamburger-button:hover {
-    background-color: var(--secondary-color);
+    background-color: var(--white-color);
     box-shadow: 0 0 0.5rem var(--navbar-hamburger-button-hover-shadow-color);
 }
 
@@ -83,7 +84,7 @@
 }
 
 .navbar-hamburger-list-item:first-child {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
 }
 
 .navbar-hamburger-list-item > a {
